@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms'
+//import { Date } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -7,7 +8,7 @@ import { NgForm } from '@angular/forms'
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-  maxDate;
+  maxDate: any;
 
   constructor() { }
 

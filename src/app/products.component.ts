@@ -12,7 +12,7 @@ import { ProductsService } from './products.service'
 export class ProductsComponent implements OnInit, OnDestroy {
 	productName = 'A book';
 	isDisabled = true;
-	products = [];
+	products: string[];
 	private productSubscription: Subscription;
 
 	constructor(private productsService: ProductsService) {
@@ -22,7 +22,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnInit() {
-		this.products = this.productsService.getProducts();
+		//this.products = this.productsService.getProducts();
 		this.productSubscription = this.productsService.productUpdated.subscribe(() => {
 			this.products = this.productsService.getProducts();
 		});
