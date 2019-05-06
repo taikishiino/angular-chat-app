@@ -1,0 +1,22 @@
+#container {
+	display: flex;
+	width: 100%;
+}
+
+.child {
+	height: 200px;
+}
+
+#child1 {
+	background: red;
+}
+#child2 {
+	background: green;
+}
+#child1 {
+	background: blue;
+}
+
+mat-form-field {
+	width: 300px;
+}
