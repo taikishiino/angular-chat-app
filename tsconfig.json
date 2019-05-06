@@ -5,18 +5,30 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "module": "es2015",
-    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "downlevelIteration": true, // ES5のとき、for-of構文を使うために必要
+    "forceConsistentCasingInFileNames": true, // ファイル名の大文字小文字に一貫性がないときにコンパイルエラー
+    "strict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": false,
+    "strictBindCallApply": false,
+    "strictPropertyInitialization": false,
+    "noImplicitAny": false, // Any安全
+    "noImplicitThis": false, // Any安全
+    "noImplicitReturns": true,
+    "noUnusedLocals": true, // コメントアウトを警告
+    "noUnusedParameters": true, // コメントアウトを警告
     "importHelpers": true,
-    "target": "es5",
+    "target": "es2018",
+    "moduleResolution": "node",
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
-      "es2018",
-      "dom"
+      "dom",
+      "dom.iterable",
+      "es2018"
     ]
   }
 }
